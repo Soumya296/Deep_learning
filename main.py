@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 import h5py
 from tensorflow import keras
-lst1 = np.range(0,25)
+lst1 = np.range(0,24)
 lst2 = ['a','b','c','d','e','f','g','h','i','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y']
 dct = {zip(lst1,lst2)}
 
