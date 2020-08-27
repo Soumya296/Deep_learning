@@ -10,7 +10,7 @@ cap = cv2.VideoCapture(0)
 
 image_counter = 1 
 
-while(cap.isopened()):
+while(cap.isOpened()):
     ret, frame = cap.read()
     
     if not ret:
@@ -18,7 +18,7 @@ while(cap.isopened()):
         break
     cv2.imshow("Test", frame)
 
-    key = cv2.waitkey(0)
+    key = cv2.waitKey(0)
 
     if key == 27:
     
