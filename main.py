@@ -3,6 +3,10 @@ import numpy as np
 import cv2
 import h5py
 from tensorflow import keras
+lst1 = [0,  1,  2,  3,  4,  5,  6,  7,  8, 10, 11, 12, 13, 14, 15, 16, 17,
+       18, 19, 20, 21, 22, 23, 24]
+lst2 = ['a','b','c','d','e','f','g','h','i','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y']
+dct = {zip(lst1,lst2)}
 
 model = keras.models.load_model('My_model.h5')
 
@@ -42,7 +46,7 @@ while(cap.isOpened()):
         img_test = np.array(img_reshaped, dtype = 'float64')
         img_test = img_test/255
 
-        print('\n The Digit is\n'+ str(np.argmax(model.predict(img_test))))
+        print('\n The letter is\n'+ str(np.argmax(model.predict(img_test))))
 
         img_counter += 1
 
