@@ -46,7 +46,7 @@ while(cap.isOpened()):
         img_test = np.array(img_reshaped, dtype = 'float64')
         img_test = img_test/255
 
-        print('\n The letter is\n'+ str(np.argmax(model.predict(img_test))))
+        print('\n The letter is\n'+ str(dct[np.argmax(model.predict(img_test))]))
 
         img_counter += 1
 
